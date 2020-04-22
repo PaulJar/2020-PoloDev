@@ -1,0 +1,115 @@
+
+cd "D:\PAUL\GEEK ZONE LVL 2\Angular JS\mon-projet-angular"
+
+#### Configure the email to use for GitHub
+git config --global user.email "paul.jardel@accenture.com"
+
+#### Get the status of the folder
+git status
+
+#### Init folder to be seen as a git repository
+git init
+
+
+
+#### Clone a repository
+git clone http://...
+
+
+
+#### Add files to index (to be commited)
+git add README.md
+git add .
+
+#### Commit
+git commit -m "My commit comment"
+https://git-scm.com/docs/git-commit
+
+	-a
+	automatically stage files that have been modified and deleted, but new files you have not told Git about are not affected.
+	
+	-m <msg>
+	Use the given <msg> as the commit message.
+	
+#### On 1st commit, you need to remotely create the repository if it was not init yet (with README for example)
+	fatal: 'origin' does not appear to be a git repository
+	fatal: Could not read from remote repository.
+git remote add origin https://github.com/PaulJar/kata-tennis-paul-java.git
+
+
+
+#### Read commit history
+git log
+
+#### Quit log
+(touch) q
+
+
+
+#### Get the old version
+git revert [<branch>]
+
+#### Cancel all changes not commited yet
+git reset HEAD
+
+
+
+#### Pusher les commit vers GitHub
+git push origin master
+
+#### Get all updates from repository
+git pull origin master
+
+#### Force "git pull" to overwrite local files
+git fetch --all
+git reset --hard origin/master
+OR
+git reset --hard origin/<branch_name>
+
+
+
+#### View current branch
+git branch
+
+#### Create a new branch
+git branch [<branch>]
+
+#### Use another branch
+git checkout [<branch>]
+git checkout master
+git checkout 17ad4ead9a529597c2f8f6cee5ef981c711b5ca3
+
+
+
+#### Merge branches (from [<targetBranch>] to [<currentBranch>])
+git checkout [<currentBranch>]
+get merge [<targetBranch>]
+
+#### Merge : resolve conflicts
+get merge [<targetBranch>]
+	Auto-merging hello.md
+	CONFLICT (content): Merge conflict in hello.md
+	Automatic merge failed; fix conflicts and then commit the result.
+(resolve conflicts on files)
+git add [<file>]
+git commit
+
+
+
+#### Check who changed each lines of a file
+git blame [<file>]
+
+#### Check all changes from one commit
+git show [<commitSHA>]
+
+#### DO NOT commit some files
+(add paths on the file 'gitignore', at the root of the project)
+(commit the file 'gitignore')
+
+
+
+#### Stash (put all current modifications on branch, on the stash)
+git stash
+
+#### Unstash (delete what is on stash)
+git stash pop

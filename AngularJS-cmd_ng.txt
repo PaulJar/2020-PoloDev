@@ -1,0 +1,61 @@
+
+#### Install Node.JS (LTS)
+https://nodejs.org/en/download/
+
+#### Install NPM
+npm install -g npm@latest
+
+#### Install Angluar
+npm install -g @angular/cli
+
+#### Angular cmd (ng)
+
+  add Adds support for an external library to your project.
+  analytics Configures the gathering of Angular CLI usage metrics. See https://v8.angular.io/cli/usage-analytics-gathering.
+  build (b) Compiles an Angular app into an output directory named dist/ at the given output path. Must be executed from within a workspace directory.
+  deploy Invokes the deploy builder for a specified project or for the default project in the workspace.
+  config Retrieves or sets Angular configuration values in the angular.json file for the workspace.
+  doc (d) Opens the official Angular documentation (angular.io) in a browser, and searches for a given keyword.
+  e2e (e) Builds and serves an Angular app, then runs end-to-end tests using Protractor.
+  generate (g) Generates and/or modifies files based on a schematic.
+  help Lists available commands and their short descriptions.
+  lint (l) Runs linting tools on Angular app code in a given project folder.
+  new (n) Creates a new workspace and an initial Angular app.
+  run Runs an Architect target with an optional custom builder configuration defined in your project.
+  serve (s) Builds and serves your app, rebuilding on file changes.
+  test (t) Runs unit tests in a project.
+  update Updates your application and its dependencies. See https://update.angular.io/
+  version (v) Outputs Angular CLI version.
+  xi18n (i18n-extract) Extracts i18n messages from source code.
+
+#### Get Angular version
+ng v
+
+#### Create a new project
+ng new mon-premier-projet
+
+ng new mon-projet-angular --style=scss --skip-tests=true
+
+#### If error : "npm ERR! Unexpected end of JSON input while parsing near '...s v3.0.4\r\nComment: '"
+Open Windows Powershell as admin
+npm cache clean --force
+npm install -g @angular/cli
+https://devblogs.microsoft.com/premier-developer/getting-started-with-node-js-angular-and-visual-studio-code/
+
+#### Launch the project
+cd mon-projet-angular
+ng serve --open
+
+#### If error : An unhandled exception occurred: Cannot find module '@angular-devkit/build-angular/package.json'
+#### You need to install all the dependencies listed in package.json
+npm install
+
+#### Stop the launch
+Ctrl + C (x 2)
+
+#### Install modules
+npm install bootstrap@3.3.7 --save
+npm install rxjs-compat --save
+
+#### Generate a component
+ng generate component mon-premier 

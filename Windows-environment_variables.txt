@@ -1,0 +1,9 @@
+User variables :
+M2 = C:\apache-maven-3.5.2
+
+System variables :
+JAVA_HOME = C:\Program Files\Java\jdk1.8.0_162
+JRE_HOME = C:\Program Files\Java\jre1.8.0_162
+M2_HOME = C:\apache-maven-3.5.2
+MAVEN_HOME = C:\apache-maven-3.5.2
+Path : ajouter : %M2_HOME%\bin
