@@ -1,0 +1,10 @@
+Fix Java was started but returned exit code 1
+
+https://troubleshooter.xyz/wiki/fix-java-was-started-but-returned-exit-code-1/
+
+Add on 'eclipse.ini', before '-vmargs' : 
+-vm
+[pathToJdk]\bin\server\jvm.dll
+
+ex :
+C:\Program Files\Java\jdk-14\bin\server\jvm.dll

@@ -1,0 +1,29 @@
+
+#### Create a database
+CREATE DATABASE javaee DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
+
+#### Use a database
+use javaee;
+
+#### Create a table on database
+CREATE TABLE  noms (
+ id INT( 11 ) NOT NULL AUTO_INCREMENT ,
+ nom VARCHAR( 200 ) NOT NULL ,
+ prenom VARCHAR( 200 ) NOT NULL ,
+ PRIMARY KEY ( id )
+) ENGINE = INNODB;
+
+#### Show tables of a database
+show tables;
+
+#### Show table of a database (with columns / details)
+describe noms;
+
+#### Add a row on a table
+INSERT INTO noms(nom, prenom) VALUES("Dupont", "Jean");
+
+#### Remove a row on a table
+DELETE FROM noms WHERE prenom = 'Bernard';
+
+#### Show row of a table
+SELECT nom, prenom FROM noms;
