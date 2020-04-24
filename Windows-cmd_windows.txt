@@ -3,3 +3,145 @@
 
 cd "C:\Users\jarde\OneDrive\Desktop\tett"
 for /r %d in (*) do move "%d" "D:\BIGBIGTEST"
+
+
+
+
+
+
+######################## BATCH
+
+#### Change Directory
+cd "C:\Users\jarde\Desktop\mon test"
+cd ..
+
+#### Launch anything
+start fichier.bat
+start fichier.txt
+start folder
+start http://www.siteduzero.com/
+
+#### Do not close the window
+pause
+pause > nul  # without the message
+
+#### Clean console
+cls
+
+#### Write a line
+echo Hello World :)
+echo.  # break line
+echo Pierre ^> Salut  # escape special characters : "^"
+echo. & echo. & echo Salut
+
+#### Insert comment
+:: comment
+REM comment
+
+#### Remove all previous lines on display
+@echo off
+
+#### Add a atitle to script
+title Nom de mon programme
+
+#### Change size of window
+mode con cols=80 lines=16
+
+#### Change color of window background / text
+color 0F
+color 0A
+
+#### Set variable
+set pseudo=Etoile Filante
+set a=2
+set b=5
+set /a resultat=%a%+%b%
+
+#### Get text from user
+set /p saisie=Saisissez votre texte:
+
+#### Condition
+if [COMPARE 1] [COMPARANT] [COMPARE 2] (
+  :: action si la condition est respectée
+) else (
+  :: action si la condition n'est pas respectée
+)
+	Example :
+	if %variable1% == 12 (
+	  echo variable1 est egal a 12
+	) else (
+	  echo variable1 n'est pas egal a 12
+	)
+	if 42 == 42 echo Le monde marche !
+	
+if valeur1 lss valeur2 if valeur3 lss valeur4 echo Youpi
+
+if not exist [FICHIER] (
+  :: action si la condition est respectée
+) else (
+  :: action si la condition n'est pas respectée
+)
+
+#### Compare
+equ (==)
+neq (!=)
+lss (<)
+leq (<=)
+gtr (>)
+geq (>=)
+
+#### Loop
+for %%v in (5 4 3 2 1) do (
+  echo %%v
+)
+
+	From 0 to 50, 1 by 1 :
+for /l %%v in (0, 1, 50) do (
+  echo %%v
+)
+
+	All files on a repository
+for /d %variable IN (repository)
+
+	A repository and all its sub-repositories
+for /r
+
+#### Check a folder content
+dir [folder]
+
+#### Create a folder
+mkdir [folder]
+
+#### Remove folder
+rmdir [DOSSIER]
+
+#### Create a file (with inital content)
+(echo)>[file]
+	Example :
+	(echo bonjour tout le monde!
+	echo Encore)>bonjour.txt
+	(echo bonjour tout le monde!
+	echo Encore)>"bonjour Polo.txt"
+	
+#### Change file name
+ren [ANCIEN NOM] [NOUVEAU NOM]
+
+#### Write into a file (remove everything that existed)
+echo [MESSAGE] > [FICHIER]
+
+#### Write into a file (at the end)
+echo [MESSAGE] >> [FICHIER]
+
+#### Display file content
+type [FICHIER]
+
+#### Read a file
+for /f "tokens=*" %%a in (test.txt) do (
+ echo %%a
+)
+
+#### Get information on network
+ipconfig
+
+#### Ping a website / ip
+ping openclassrooms.com
