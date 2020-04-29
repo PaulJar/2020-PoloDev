@@ -58,7 +58,11 @@ set b=5
 set /a resultat=%a%+%b%
 
 #### Get text from user
-set /p saisie=Saisissez votre texte:
+set /p saisie=Saisissez votre texte:	
+	Example :
+	echo 1. Continuer - 2. Quitter
+	set /p question=Que voulez-vous faire ?
+	if %question%==2 ( exit )
 
 #### Condition
 if [COMPARE 1] [COMPARANT] [COMPARE 2] (
